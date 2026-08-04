@@ -360,6 +360,81 @@ input {
   margin-top: 0;
 }
 
+/* Stepper */
+.stepper {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.stepper-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.stepper-item:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.stepper-item-active {
+  border-color: var(--color-primary);
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.stepper-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.stepper-item-active .stepper-dot {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.stepper-item-done .stepper-dot {
+  background: var(--color-success);
+  color: var(--color-primary-contrast);
+}
+
+.stepper-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stepper-item-active .stepper-label {
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .stepper-label {
+    display: none;
+  }
+}
+
 .question-item {
   display: flex;
   align-items: center;
@@ -404,6 +479,15 @@ input {
 .toggle-btn.selected-no {
   background: rgba(220, 38, 38, 0.1);
   color: var(--color-danger);
+}
+
+.submit-bar-row {
+  display: flex;
+  gap: 12px;
+}
+
+.submit-bar-row .btn-primary {
+  flex: 1;
 }
 
 .submit-bar {

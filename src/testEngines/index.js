@@ -1,4 +1,4 @@
-import { CATEGORY_LABELS, sdsHollandQuestions } from '../data/sdsHolland/questions';
+import { CATEGORY_LABELS, CATEGORY_ORDER, sdsHollandQuestions } from '../data/sdsHolland/questions';
 import { computeScores, countAnswered, getHollandCode, isComplete } from '../data/sdsHolland/scoring';
 import { hollandResultsLookup } from '../data/sdsHolland/resultsLookup';
 
@@ -9,6 +9,7 @@ export const testEngines = {
   'sds-holland': {
     questions: sdsHollandQuestions,
     categoryLabels: CATEGORY_LABELS,
+    categoryOrder: CATEGORY_ORDER,
     computeScores,
     getCode: getHollandCode,
     countAnswered,
