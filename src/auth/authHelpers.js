@@ -65,5 +65,8 @@ export function mapAuthErrorToMessage(error, mode) {
   if (code === 'auth/network-request-failed') {
     return 'Tidak dapat terhubung ke server. Periksa koneksi internet Anda.';
   }
+  if (code === 'auth/configuration-not-found' || code === 'auth/operation-not-allowed') {
+    return 'Firebase Authentication belum diaktifkan. Aktifkan provider Email/Password di Firebase Console.';
+  }
   return 'Terjadi kesalahan. Silakan coba lagi.';
 }
