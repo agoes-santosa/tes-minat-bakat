@@ -81,9 +81,16 @@ export default function ResultsPage() {
           {entry && (
             <>
               <h3 style={{ marginBottom: 4 }}>Rekomendasi Peran/Karier</h3>
+              <p className="form-hint" style={{ marginTop: 0, marginBottom: 12 }}>
+                Klik salah satu peran untuk melihat jurusan dan rekomendasi kampus di Indonesia.
+              </p>
               <ul className="occupation-list">
                 {entry.occupations.map((role) => (
-                  <li key={role}>{role}</li>
+                  <li key={role}>
+                    <Link to={`/hasil/${result.id}/peran/${encodeURIComponent(role)}`} className="occupation-link">
+                      {role}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </>

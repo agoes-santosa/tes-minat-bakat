@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
 import TestRunnerPage from './pages/TestRunnerPage';
 import ResultsPage from './pages/ResultsPage';
+import RoleDetailPage from './pages/RoleDetailPage';
 import HistoryPage from './pages/HistoryPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -32,6 +33,14 @@ export default function App() {
               element={
                 <RequireAuth>
                   <ResultsPage />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/hasil/:resultId/peran/:occupation"
+              element={
+                <RequireAuth>
+                  <RoleDetailPage />
                 </RequireAuth>
               }
             />
