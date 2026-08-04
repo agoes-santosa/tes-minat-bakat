@@ -1,12 +1,14 @@
 import { Link, useParams } from 'react-router-dom';
 import { occupationFieldMap } from '../data/occupationFieldMap';
 import { careerFields } from '../data/careerFields';
+import { careerOutlook, OUTLOOK_TIERS } from '../data/careerOutlook';
 
 export default function RoleDetailPage() {
   const { resultId, occupation: occupationParam } = useParams();
   const occupation = decodeURIComponent(occupationParam);
   const fieldKey = occupationFieldMap[occupation];
   const field = fieldKey ? careerFields[fieldKey] : null;
+  const outlook = careerOutlook[occupation];
 
   return (
     <div className="page">
@@ -43,6 +45,23 @@ export default function RoleDetailPage() {
                 fakultas bersifat indikatif dan dapat berubah seiring reorganisasi kampus — cek situs resmi
                 universitas untuk memastikan.
               </p>
+
+              {outlook && (
+                <div className="outlook-section">
+                  <h3 style={{ marginBottom: 8 }}>Prospek Karier ke Depan</h3>
+                  <span className={`outlook-badge outlook-${outlook.tier}`}>
+                    {OUTLOOK_TIERS[outlook.tier].label}
+                  </span>
+                  <p style={{ marginTop: 10 }}>{outlook.summary}</p>
+                  <p className="outlook-tip">
+                    <strong>Cara beradaptasi:</strong> {outlook.tip}
+                  </p>
+                  <p className="form-hint">
+                    Perkiraan arah umum berdasarkan tren otomasi/AI dan pasar kerja Indonesia saat ini, bukan
+                    ramalan pasti — kondisi bisa berubah.
+                  </p>
+                </div>
+              )}
             </>
           ) : (
             <p style={{ color: 'var(--color-text-muted)' }}>

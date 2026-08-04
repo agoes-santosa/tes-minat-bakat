@@ -608,6 +608,54 @@ input {
   color: var(--color-text-muted);
 }
 
+.outlook-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.outlook-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.outlook-cerah {
+  background: rgba(22, 163, 74, 0.14);
+  color: var(--color-success);
+}
+
+.outlook-stabil {
+  background: rgba(79, 70, 229, 0.12);
+  color: var(--color-primary);
+}
+
+.outlook-waspada {
+  background: rgba(217, 119, 6, 0.14);
+  color: #b45309;
+}
+
+@media (prefers-color-scheme: dark) {
+  .outlook-waspada {
+    color: #fbbf24;
+  }
+}
+
+.outlook-menurun {
+  background: rgba(220, 38, 38, 0.12);
+  color: var(--color-danger);
+}
+
+.outlook-tip {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+}
+
 .actions-row {
   display: flex;
   gap: 12px;
