@@ -589,11 +589,23 @@ input {
 
 .university-list li {
   padding-left: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .university-list li::marker {
   font-weight: 700;
   color: var(--color-primary);
+}
+
+.university-name {
+  font-weight: 600;
+}
+
+.university-faculty {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
 }
 
 .actions-row {

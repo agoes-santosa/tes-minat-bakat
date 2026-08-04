@@ -32,11 +32,16 @@ export default function RoleDetailPage() {
               <h3 style={{ marginBottom: 8 }}>Rekomendasi Kampus di Indonesia</h3>
               <ol className="university-list">
                 {field.universities.map((uni) => (
-                  <li key={uni}>{uni}</li>
+                  <li key={uni.name}>
+                    <span className="university-name">{uni.name}</span>
+                    <span className="university-faculty">{uni.faculty.join(' / ')}</span>
+                  </li>
                 ))}
               </ol>
               <p className="form-hint">
-                Urutan berdasarkan reputasi umum dan akreditasi program studi, bukan peringkat resmi.
+                Urutan kampus berdasarkan reputasi umum dan akreditasi program studi, bukan peringkat resmi. Nama
+                fakultas bersifat indikatif dan dapat berubah seiring reorganisasi kampus — cek situs resmi
+                universitas untuk memastikan.
               </p>
             </>
           ) : (
