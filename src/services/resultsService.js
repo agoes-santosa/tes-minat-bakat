@@ -3,13 +3,17 @@ import { db } from '../firebase/firebaseConfig';
 
 // Always scoped by the caller's own uid (taken from AuthContext, never
 // from the URL) - see firestore.rules for the matching security boundary.
-export async function saveResult(uid, { testId, scores, ordered, key }) {
+// `payload` is spread as-is (beyond testId/scores/ordered/key) so optional
+// per-test fields like capabilityScores are only written when present -
+// Firestore rejects `undefined` field values.
+export async function saveResult(uid, { testId, scores, ordered, key, ...optionalFields }) {
   const ref = collection(db, 'users', uid, 'results');
   const docRef = await addDoc(ref, {
     testId,
     scores,
     hollandCodeOrdered: ordered,
     hollandCodeKey: key,
+    ...optionalFields,
     createdAt: serverTimestamp(),
   });
   return docRef.id;

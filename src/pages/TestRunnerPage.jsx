@@ -6,6 +6,16 @@ import { saveResult } from '../services/resultsService';
 import ProgressBar from '../components/ProgressBar';
 import CategoryStepper from '../components/CategoryStepper';
 import QuestionChecklistItem from '../components/QuestionChecklistItem';
+import CapabilityRatingItem from '../components/CapabilityRatingItem';
+
+function groupByCategory(questions) {
+  const groups = new Map();
+  for (const question of questions ?? []) {
+    if (!groups.has(question.category)) groups.set(question.category, []);
+    groups.get(question.category).push(question);
+  }
+  return groups;
+}
 
 export default function TestRunnerPage() {
   const { testId } = useParams();
@@ -14,34 +24,37 @@ export default function TestRunnerPage() {
   const navigate = useNavigate();
 
   const [answers, setAnswers] = useState({});
+  const [capabilityAnswers, setCapabilityAnswers] = useState({});
   const [step, setStep] = useState(0);
   const [maxStepReached, setMaxStepReached] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
-  const questionsByCategory = useMemo(() => {
-    if (!engine) return new Map();
-    const groups = new Map();
-    for (const question of engine.questions) {
-      if (!groups.has(question.category)) groups.set(question.category, []);
-      groups.get(question.category).push(question);
-    }
-    return groups;
-  }, [engine]);
+  const questionsByCategory = useMemo(() => groupByCategory(engine?.questions), [engine]);
+  const capabilityByCategory = useMemo(() => groupByCategory(engine?.capabilityQuestions), [engine]);
 
   if (!engine) return <Navigate to="/404" replace />;
 
+  const hasCapability = Boolean(engine.capabilityQuestions);
   const categories = engine.categoryOrder;
   const currentCategory = categories[step];
   const currentQuestions = questionsByCategory.get(currentCategory) ?? [];
+  const currentCapabilityQuestions = capabilityByCategory.get(currentCategory) ?? [];
   const isLastStep = step === categories.length - 1;
 
-  const answered = engine.countAnswered(answers);
-  const total = engine.questions.length;
-  const isCurrentPageComplete = currentQuestions.every((question) => typeof answers[question.id] === 'boolean');
+  const answered = engine.countAnswered(answers) + (hasCapability ? engine.countCapabilityAnswered(capabilityAnswers) : 0);
+  const total = engine.questions.length + (hasCapability ? engine.capabilityQuestions.length : 0);
+
+  const isCurrentPageComplete =
+    currentQuestions.every((question) => typeof answers[question.id] === 'boolean') &&
+    currentCapabilityQuestions.every((question) => typeof capabilityAnswers[question.id] === 'number');
 
   function handleAnswer(questionId, value) {
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
+  }
+
+  function handleCapabilityAnswer(questionId, value) {
+    setCapabilityAnswers((prev) => ({ ...prev, [questionId]: value }));
   }
 
   function goToStep(index) {
@@ -66,12 +79,17 @@ export default function TestRunnerPage() {
 
   async function handleSubmit() {
     if (!engine.isComplete(answers)) return;
+    if (hasCapability && !engine.isCapabilityComplete(capabilityAnswers)) return;
     setSubmitting(true);
     setError('');
     try {
       const scores = engine.computeScores(answers);
       const { ordered, key } = engine.getCode(scores);
-      const resultId = await saveResult(currentUser.uid, { testId, scores, ordered, key });
+      const payload = { testId, scores, ordered, key };
+      if (hasCapability) {
+        payload.capabilityScores = engine.computeCapabilityScores(capabilityAnswers);
+      }
+      const resultId = await saveResult(currentUser.uid, payload);
       navigate(`/hasil/${resultId}`);
     } catch {
       setError('Gagal menyimpan hasil tes. Silakan coba lagi.');
@@ -110,6 +128,25 @@ export default function TestRunnerPage() {
               onChange={handleAnswer}
             />
           ))}
+
+          {currentCapabilityQuestions.length > 0 && (
+            <>
+              <h3 className="capability-heading">Seberapa yakin Anda dengan kemampuan Anda di bidang ini?</h3>
+              <p className="capability-subheading">
+                Ini terpisah dari minat di atas — nilai kepercayaan diri Anda pada kemampuan, bukan seberapa suka
+                Anda melakukannya.
+              </p>
+              {currentCapabilityQuestions.map((question) => (
+                <CapabilityRatingItem
+                  key={question.id}
+                  question={question}
+                  value={capabilityAnswers[question.id]}
+                  onChange={handleCapabilityAnswer}
+                  scale={engine.capabilityScale}
+                />
+              ))}
+            </>
+          )}
         </div>
 
         {error && <div className="error-box" style={{ marginTop: 16 }}>{error}</div>}

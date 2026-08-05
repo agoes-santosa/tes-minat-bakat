@@ -4,6 +4,7 @@ import { useAuth } from '../auth/AuthContext';
 import { getResult } from '../services/resultsService';
 import { getTestEngine } from '../testEngines';
 import LoadingSpinner from '../components/LoadingSpinner';
+import InterestCapabilityComparison from '../components/InterestCapabilityComparison';
 
 export default function ResultsPage() {
   const { resultId } = useParams();
@@ -77,6 +78,10 @@ export default function ResultsPage() {
               </div>
             ))}
           </div>
+
+          {result.capabilityScores && engine && (
+            <InterestCapabilityComparison result={result} engine={engine} />
+          )}
 
           {entry && (
             <>

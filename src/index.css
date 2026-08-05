@@ -137,6 +137,15 @@ input {
   background: var(--color-primary-hover);
 }
 
+.btn-info {
+  background: #d97706;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35);
+}
+
+.btn-info:hover:not(:disabled) {
+  background: #b45309;
+}
+
 .btn-secondary {
   background: transparent;
   border-color: var(--color-border);
@@ -449,6 +458,58 @@ input {
   flex: 1;
 }
 
+.capability-heading {
+  margin: 24px 0 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.capability-subheading {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.capability-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.capability-item p {
+  margin: 0 0 10px;
+}
+
+.rating-scale {
+  display: flex;
+  gap: 8px;
+}
+
+.rating-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rating-btn-selected {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  border-color: var(--color-primary);
+}
+
+.rating-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  max-width: 260px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
 .toggle-group {
   display: inline-flex;
   border: 1px solid var(--color-border);
@@ -646,6 +707,93 @@ input {
 .outlook-menurun {
   background: rgba(220, 38, 38, 0.12);
   color: var(--color-danger);
+}
+
+.outlook-comparison-selaras {
+  background: rgba(79, 70, 229, 0.12);
+  color: var(--color-primary);
+}
+
+.outlook-comparison-talenta {
+  background: rgba(22, 163, 74, 0.14);
+  color: var(--color-success);
+}
+
+.outlook-comparison-berkembang {
+  background: rgba(217, 119, 6, 0.14);
+  color: #b45309;
+}
+
+@media (prefers-color-scheme: dark) {
+  .outlook-comparison-berkembang {
+    color: #fbbf24;
+  }
+}
+
+.comparison-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.comparison-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-style: normal;
+}
+
+.legend-dot-interest {
+  background: var(--color-primary);
+}
+
+.legend-dot-capability {
+  background: var(--color-success);
+}
+
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comparison-category-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.comparison-bar-row {
+  margin-bottom: 4px;
+}
+
+.comparison-bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.comparison-bar-fill-interest {
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.comparison-bar-fill-capability {
+  height: 100%;
+  background: var(--color-success);
 }
 
 .outlook-tip {

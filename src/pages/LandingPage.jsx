@@ -11,8 +11,8 @@ export default function LandingPage() {
         <div className="hero">
           <h1>Tes Minat Bakat</h1>
           <p>Pilih salah satu tes di bawah ini untuk mengenal minat dan potensi karier Anda.</p>
-          <Link to="/penjelasan" className="btn btn-secondary" style={{ marginTop: 16 }}>
-            Apa itu Minat & Bakat?
+          <Link to="/penjelasan" className="btn btn-primary btn-info" style={{ marginTop: 16 }}>
+            <span aria-hidden="true">💡</span> Apa itu Minat & Bakat?
           </Link>
         </div>
         <div className="test-grid">
