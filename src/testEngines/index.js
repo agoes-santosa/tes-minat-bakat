@@ -10,6 +10,8 @@ import {
   isCapabilityComplete,
 } from '../data/sdsHolland/capabilityScoring';
 import { classifyGap, GAP_TIERS } from '../data/sdsHolland/gapAnalysis';
+import { allOccupationNames, occupationToCode } from '../data/sdsHolland/occupationCodeIndex';
+import { computeAlignment, targetProfileForCode } from '../data/sdsHolland/roleFit';
 
 // Extension point: adding a future test means adding a new folder under
 // src/data/, then one new entry here, then one new entry in src/data/tests.js.
@@ -36,6 +38,11 @@ export const testEngines = {
     capabilityToPercent,
     classifyGap,
     gapTiers: GAP_TIERS,
+
+    occupationToCode,
+    allOccupationNames,
+    targetProfileForCode,
+    computeAlignment,
   },
 };
 

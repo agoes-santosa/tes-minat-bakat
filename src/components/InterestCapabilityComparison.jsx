@@ -15,8 +15,9 @@ export default function InterestCapabilityComparison({ result, engine }) {
     };
   });
 
-  const biggestGap = [...rows].sort((a, b) => Math.abs(b.gap) - Math.abs(a.gap))[0];
-  const biggestGapInfo = engine.gapTiers[biggestGap.tier];
+  const notableGaps = rows.filter((row) => row.tier !== 'selaras');
+  const biggestGap = notableGaps.sort((a, b) => Math.abs(b.gap) - Math.abs(a.gap))[0];
+  const biggestGapInfo = biggestGap ? engine.gapTiers[biggestGap.tier] : null;
 
   return (
     <div className="outlook-section">
@@ -54,8 +55,17 @@ export default function InterestCapabilityComparison({ result, engine }) {
       </div>
 
       <p className="outlook-tip" style={{ marginTop: 16 }}>
-        <strong>Yang paling menonjol:</strong> Pada bidang <strong>{biggestGap.label}</strong>,{' '}
-        {biggestGapInfo.description_id.charAt(0).toLowerCase() + biggestGapInfo.description_id.slice(1)}
+        {biggestGap ? (
+          <>
+            <strong>Kesenjangan paling mencolok:</strong> Pada bidang <strong>{biggestGap.label}</strong>,{' '}
+            {biggestGapInfo.description_id.charAt(0).toLowerCase() + biggestGapInfo.description_id.slice(1)}
+          </>
+        ) : (
+          <>
+            Minat dan kemampuan Anda selaras di semua bidang — tidak ada kesenjangan besar yang perlu
+            diperhatikan khusus saat ini.
+          </>
+        )}
       </p>
     </div>
   );

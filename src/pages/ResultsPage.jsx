@@ -117,6 +117,18 @@ export default function ResultsPage() {
             </>
           )}
 
+          {engine && (
+            <div className="outlook-section" style={{ textAlign: 'center' }}>
+              <h3 style={{ marginBottom: 4 }}>Ada Peran Incaran Lain?</h3>
+              <p className="form-hint" style={{ marginTop: 0, marginBottom: 12 }}>
+                Cek seberapa selaras peran pilihan Anda sendiri dengan profil ini.
+              </p>
+              <Link to={`/hasil/${result.id}/cocok`} className="btn btn-secondary">
+                Cek Kecocokan Peran Lain
+              </Link>
+            </div>
+          )}
+
           <div className="actions-row">
             <button type="button" className="btn btn-secondary" onClick={() => navigate('/riwayat')}>
               Lihat Riwayat

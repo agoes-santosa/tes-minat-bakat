@@ -633,6 +633,16 @@ input {
   fill: var(--color-success);
 }
 
+.hexagon-series-target {
+  fill: rgba(217, 119, 6, 0.12);
+  stroke: #d97706;
+  stroke-dasharray: 4 3;
+}
+
+.hexagon-point-target {
+  fill: #d97706;
+}
+
 .gap-table {
   width: 100%;
   border-collapse: collapse;
@@ -808,6 +818,36 @@ input {
 
 .legend-dot-capability {
   background: var(--color-success);
+}
+
+.legend-dot-target {
+  background: #d97706;
+}
+
+.fit-score-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 20px 0 8px;
+}
+
+.fit-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.fit-score-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fit-score-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
 }
 
 .comparison-list {

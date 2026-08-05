@@ -9,6 +9,7 @@ import AuthPage from './pages/AuthPage';
 import TestRunnerPage from './pages/TestRunnerPage';
 import ResultsPage from './pages/ResultsPage';
 import RoleDetailPage from './pages/RoleDetailPage';
+import RoleFitPage from './pages/RoleFitPage';
 import HistoryPage from './pages/HistoryPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -43,6 +44,14 @@ export default function App() {
               element={
                 <RequireAuth>
                   <RoleDetailPage />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/hasil/:resultId/cocok"
+              element={
+                <RequireAuth>
+                  <RoleFitPage />
                 </RequireAuth>
               }
             />
