@@ -5,6 +5,7 @@ import { getResult } from '../services/resultsService';
 import { getTestEngine } from '../testEngines';
 import LoadingSpinner from '../components/LoadingSpinner';
 import InterestCapabilityComparison from '../components/InterestCapabilityComparison';
+import HollandHexagonChart from '../components/HollandHexagonChart';
 
 export default function ResultsPage() {
   const { resultId } = useParams();
@@ -47,7 +48,19 @@ export default function ResultsPage() {
 
   const engine = getTestEngine(result.testId);
   const entry = engine?.resultsLookup[result.hollandCodeKey];
-  const maxScore = Math.max(...Object.values(result.scores));
+  const hasCapability = Boolean(result.capabilityScores && engine);
+
+  const interestPercentages = engine
+    ? Object.fromEntries(engine.categoryOrder.map((cat) => [cat, engine.interestToPercent(result.scores[cat] ?? 0)]))
+    : {};
+  const capabilityPercentages = hasCapability
+    ? Object.fromEntries(
+        engine.categoryOrder.map((cat) => [cat, engine.capabilityToPercent(result.capabilityScores[cat] ?? 0)])
+      )
+    : null;
+
+  const chartSeries = [{ key: 'interest', values: interestPercentages }];
+  if (hasCapability) chartSeries.push({ key: 'capability', values: capabilityPercentages });
 
   return (
     <div className="page">
@@ -64,24 +77,27 @@ export default function ResultsPage() {
             </>
           )}
 
-          <div className="score-bars">
-            {Object.entries(result.scores).map(([category, score]) => (
-              <div className="score-row" key={category}>
-                <span>{engine?.categoryLabels[category] ?? category}</span>
-                <div className="score-row-track">
-                  <div
-                    className="score-row-fill"
-                    style={{ width: `${maxScore === 0 ? 0 : (score / maxScore) * 100}%` }}
-                  />
+          {engine && (
+            <div className="hexagon-chart-wrap">
+              <HollandHexagonChart
+                categories={engine.categoryOrder}
+                categoryLabels={engine.categoryLabels}
+                series={chartSeries}
+              />
+              {hasCapability && (
+                <div className="comparison-legend">
+                  <span>
+                    <i className="legend-dot legend-dot-interest" /> Minat
+                  </span>
+                  <span>
+                    <i className="legend-dot legend-dot-capability" /> Kemampuan
+                  </span>
                 </div>
-                <span>{score}</span>
-              </div>
-            ))}
-          </div>
-
-          {result.capabilityScores && engine && (
-            <InterestCapabilityComparison result={result} engine={engine} />
+              )}
+            </div>
           )}
+
+          {hasCapability && <InterestCapabilityComparison result={result} engine={engine} />}
 
           {entry && (
             <>

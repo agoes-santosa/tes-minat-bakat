@@ -583,31 +583,80 @@ input {
   margin: 0 auto 24px;
 }
 
-.score-bars {
+.hexagon-chart-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
   margin: 24px 0;
 }
 
-.score-row {
-  display: grid;
-  grid-template-columns: 140px 1fr 32px;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
+.hexagon-chart {
+  width: 100%;
+  max-width: 360px;
 }
 
-.score-row-track {
-  height: 10px;
-  border-radius: 999px;
-  background: var(--color-border);
-  overflow: hidden;
+.hexagon-grid {
+  fill: none;
+  stroke: var(--color-border);
 }
 
-.score-row-fill {
-  height: 100%;
-  background: var(--color-primary);
+.hexagon-axis {
+  stroke: var(--color-border);
+}
+
+.hexagon-label {
+  fill: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hexagon-series {
+  stroke-width: 2;
+}
+
+.hexagon-series-interest {
+  fill: rgba(79, 70, 229, 0.22);
+  stroke: var(--color-primary);
+}
+
+.hexagon-series-capability {
+  fill: rgba(22, 163, 74, 0.2);
+  stroke: var(--color-success);
+}
+
+.hexagon-point-interest {
+  fill: var(--color-primary);
+}
+
+.hexagon-point-capability {
+  fill: var(--color-success);
+}
+
+.gap-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-top: 8px;
+}
+
+.gap-table th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gap-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.gap-table tr:last-child td {
+  border-bottom: none;
 }
 
 .occupation-list {
