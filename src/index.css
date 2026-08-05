@@ -571,8 +571,9 @@ input {
 }
 
 .results-header,
-.results-sidebar,
-.results-main {
+.results-graph,
+.results-main,
+.results-comparison {
   min-width: 0;
 }
 
@@ -585,26 +586,34 @@ input {
 
 @media (min-width: 880px) {
   .results-layout {
-    grid-template-columns: 1fr 380px;
+    grid-template-columns: 1fr 420px;
     grid-template-areas:
-      'header header'
-      'main sidebar';
+      'header graph'
+      'main main';
     align-items: start;
     gap: 24px;
+  }
+
+  .results-layout-2x2 {
+    grid-template-areas:
+      'header graph'
+      'main comparison';
   }
 
   .results-header {
     grid-area: header;
   }
 
-  .results-main {
-    grid-area: main;
-    position: sticky;
-    top: 20px;
+  .results-graph {
+    grid-area: graph;
   }
 
-  .results-sidebar {
-    grid-area: sidebar;
+  .results-main {
+    grid-area: main;
+  }
+
+  .results-comparison {
+    grid-area: comparison;
   }
 }
 
@@ -738,9 +747,15 @@ input {
 
 .occupation-link {
   display: block;
+  width: 100%;
   padding: 10px 12px;
   color: var(--color-text);
   text-decoration: none;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
 .occupation-link:hover {
@@ -1007,4 +1022,48 @@ input {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Role detail modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0;
+  max-height: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--color-primary);
 }

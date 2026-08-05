@@ -6,6 +6,7 @@ import { getTestEngine } from '../testEngines';
 import LoadingSpinner from '../components/LoadingSpinner';
 import InterestCapabilityComparison from '../components/InterestCapabilityComparison';
 import HollandHexagonChart from '../components/HollandHexagonChart';
+import RoleModal from '../components/RoleModal';
 
 export default function ResultsPage() {
   const { resultId } = useParams();
@@ -15,6 +16,7 @@ export default function ResultsPage() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
+  const [selectedRole, setSelectedRole] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -65,7 +67,7 @@ export default function ResultsPage() {
   return (
     <div className="page">
       <div className="container results-container">
-        <div className="results-layout">
+        <div className={`results-layout ${hasCapability ? 'results-layout-2x2' : ''}`}>
           <div className="card results-header">
             <p className="progress-label" style={{ textAlign: 'center', marginBottom: 0 }}>
               Kode Holland Anda
@@ -79,8 +81,8 @@ export default function ResultsPage() {
             )}
           </div>
 
-          <div className="card results-sidebar">
-            {engine && (
+          {engine && (
+            <div className="card results-graph">
               <div className="hexagon-chart-wrap">
                 <HollandHexagonChart
                   categories={engine.categoryOrder}
@@ -98,10 +100,8 @@ export default function ResultsPage() {
                   </div>
                 )}
               </div>
-            )}
-
-            {hasCapability && <InterestCapabilityComparison result={result} engine={engine} />}
-          </div>
+            </div>
+          )}
 
           <div className="card results-main">
             {entry && (
@@ -113,9 +113,9 @@ export default function ResultsPage() {
                 <ul className="occupation-list">
                   {entry.occupations.map((role) => (
                     <li key={role}>
-                      <Link to={`/hasil/${result.id}/peran/${encodeURIComponent(role)}`} className="occupation-link">
+                      <button type="button" className="occupation-link" onClick={() => setSelectedRole(role)}>
                         {role}
-                      </Link>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -134,6 +134,12 @@ export default function ResultsPage() {
               </div>
             )}
           </div>
+
+          {hasCapability && (
+            <div className="card results-comparison">
+              <InterestCapabilityComparison result={result} engine={engine} />
+            </div>
+          )}
         </div>
 
         <div className="actions-row">
@@ -145,6 +151,8 @@ export default function ResultsPage() {
           </Link>
         </div>
       </div>
+
+      {selectedRole && <RoleModal occupation={selectedRole} onClose={() => setSelectedRole(null)} />}
     </div>
   );
 }

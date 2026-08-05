@@ -20,11 +20,10 @@ export default function InterestCapabilityComparison({ result, engine }) {
   const biggestGapInfo = biggestGap ? engine.gapTiers[biggestGap.tier] : null;
 
   return (
-    <div className="outlook-section">
-      <h3 style={{ marginBottom: 4 }}>Minat vs Kemampuan</h3>
+    <div>
+      <h3 style={{ marginTop: 0, marginBottom: 4 }}>Minat vs Kemampuan</h3>
       <p className="form-hint" style={{ marginTop: 0, marginBottom: 12 }}>
-        Bentuk heksagon indigo (minat) dan hijau (kemampuan) di atas menunjukkan pola yang sama secara visual —
-        tabel ini merincikannya per bidang.
+        Rincian per bidang untuk diagram heksagon minat (indigo) dan kemampuan (hijau).
       </p>
 
       <div style={{ overflowX: 'auto' }}>
