@@ -4,6 +4,7 @@ import RequireAuth from './auth/RequireAuth';
 import ErrorBoundary from './components/ErrorBoundary';
 import NavBar from './components/NavBar';
 import LandingPage from './pages/LandingPage';
+import PenjelasanPage from './pages/PenjelasanPage';
 import AuthPage from './pages/AuthPage';
 import TestRunnerPage from './pages/TestRunnerPage';
 import ResultsPage from './pages/ResultsPage';
@@ -19,6 +20,7 @@ export default function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/penjelasan" element={<PenjelasanPage />} />
             <Route path="/masuk" element={<AuthPage />} />
             <Route
               path="/tes/:testId"

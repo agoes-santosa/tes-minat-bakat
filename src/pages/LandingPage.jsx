@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { TESTS } from '../data/tests';
 import TestCard from '../components/TestCard';
 
@@ -11,6 +11,9 @@ export default function LandingPage() {
         <div className="hero">
           <h1>Tes Minat Bakat</h1>
           <p>Pilih salah satu tes di bawah ini untuk mengenal minat dan potensi karier Anda.</p>
+          <Link to="/penjelasan" className="btn btn-secondary" style={{ marginTop: 16 }}>
+            Apa itu Minat & Bakat?
+          </Link>
         </div>
         <div className="test-grid">
           {TESTS.map((test) => (

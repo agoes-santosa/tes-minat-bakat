@@ -8,7 +8,7 @@ export const hollandResultsLookup = {
   AIR: {
     title: 'Realistis - Investigatif - Artistik',
     description_id:
-      'Anda menyukai pekerjaan yang menggabungkan keterampilan teknis, ketelitian analitis, dan sentuhan kreatif — suka membangun atau merancang sesuatu yang nyata sekaligus orisinal.',
+      'Anda memiliki kombinasi unik antara ketertarikan pada hal-hal praktis, rasa ingin tahu intelektual, dan kepekaan estetika. Anda cenderung senang bereksperimen dan memahami cara kerja sesuatu secara mendalam, namun tidak puas hanya dengan penjelasan teoretis — Anda ingin mewujudkannya menjadi sesuatu yang nyata dan indah dipandang. Anda menghargai orisinalitas namun tetap berpijak pada logika dan fungsi, sehingga sering menjadi orang yang bisa menjembatani ide kreatif dengan solusi teknis yang benar-benar bisa dibangun.',
     occupations: [
       'Arsitek',
       'Desainer Produk',
@@ -23,7 +23,7 @@ export const hollandResultsLookup = {
   IRS: {
     title: 'Realistis - Investigatif - Sosial',
     description_id:
-      'Anda menikmati pekerjaan praktis dan berbasis sains yang juga melibatkan membantu orang lain secara langsung.',
+      'Anda adalah tipe pemecah masalah yang senang bekerja dengan tangan sekaligus pikiran, namun motivasi terbesar Anda datang dari keinginan membantu orang lain secara langsung. Anda menikmati proses memahami cara kerja tubuh, alat, atau sistem secara mendalam, lalu menerapkan pengetahuan itu untuk meringankan beban atau menyelamatkan orang lain. Anda cenderung tenang di bawah tekanan, teliti dalam bertindak, dan lebih memilih dampak nyata dibanding sekadar teori.',
     occupations: [
       'Perawat',
       'Fisioterapis',
@@ -38,7 +38,7 @@ export const hollandResultsLookup = {
   EIR: {
     title: 'Realistis - Investigatif - Wirausaha',
     description_id:
-      'Anda tertarik memecahkan masalah teknis sekaligus memiliki jiwa bisnis — cocok memimpin proyek berbasis teknologi atau produk.',
+      'Anda memadukan ketertarikan pada hal teknis dengan naluri bisnis dan kepemimpinan yang kuat. Anda senang memahami akar masalah secara mendalam sebelum bertindak, namun begitu Anda memiliki solusi, Anda terdorong untuk mewujudkannya menjadi sesuatu yang berdampak besar — baik dalam bentuk proyek, produk, maupun usaha sendiri. Anda nyaman mengambil risiko yang telah diperhitungkan dan senang memimpin orang lain menuju hasil yang konkret.',
     occupations: [
       'Insinyur Sipil',
       'Manajer Proyek Konstruksi',
@@ -53,7 +53,7 @@ export const hollandResultsLookup = {
   CIR: {
     title: 'Realistis - Investigatif - Konvensional',
     description_id:
-      'Anda menyukai pekerjaan teknis yang terstruktur, teliti, dan berbasis data — suka bekerja dengan sistem dan prosedur yang jelas.',
+      'Anda adalah pribadi yang teliti, sistematis, dan menyukai pekerjaan yang melibatkan analisis mendalam sekaligus penerapan praktis. Anda merasa nyaman bekerja dengan data, prosedur, dan standar yang jelas, serta senang memastikan segala sesuatu berjalan akurat dan sesuai aturan. Kombinasi ini membuat Anda unggul dalam pekerjaan yang membutuhkan ketepatan teknis dan konsistensi tinggi, tanpa banyak ambiguitas.',
     occupations: [
       'Teknisi Laboratorium',
       'Analis Kendali Mutu (QC)',
@@ -68,7 +68,7 @@ export const hollandResultsLookup = {
   ARS: {
     title: 'Realistis - Artistik - Sosial',
     description_id:
-      'Anda menikmati kegiatan tangan yang kreatif sekaligus senang berinteraksi dan membantu orang lain.',
+      'Anda senang bekerja menggunakan tangan dan kreativitas sekaligus terhubung dengan orang lain secara personal. Anda tidak hanya ingin menciptakan sesuatu yang indah atau bermanfaat, tetapi juga ingin berbagi keterampilan itu dan melihat orang lain berkembang karenanya. Anda cenderung hangat, ekspresif, dan lebih menyukai aktivitas langsung dan interaktif dibanding duduk di belakang meja.',
     occupations: [
       'Guru Keterampilan/Prakarya',
       'Instruktur Tari atau Olahraga',
@@ -83,7 +83,7 @@ export const hollandResultsLookup = {
   AER: {
     title: 'Realistis - Artistik - Wirausaha',
     description_id:
-      'Anda suka menciptakan produk atau karya nyata dan memiliki dorongan untuk memasarkan serta mengembangkan usaha darinya.',
+      'Anda memiliki jiwa pencipta sekaligus pengusaha — senang membuat sesuatu yang nyata dan orisinal, lalu terdorong untuk membawanya ke pasar yang lebih luas. Anda menikmati proses kreatif dari awal hingga akhir, termasuk bagian membangun dan menjual hasil karya Anda sendiri. Anda cenderung mandiri, percaya diri dengan visi Anda, dan tidak takut mengambil risiko demi mewujudkan ide menjadi usaha nyata.',
     occupations: [
       'Pengusaha Kerajinan/Kriya',
       'Pemilik Studio Desain',
@@ -98,7 +98,7 @@ export const hollandResultsLookup = {
   ACR: {
     title: 'Realistis - Artistik - Konvensional',
     description_id:
-      'Anda menikmati pekerjaan teknis yang membutuhkan ketelitian sekaligus cita rasa visual dan estetika.',
+      'Anda memadukan ketelitian teknis dengan kepekaan visual — senang mengerjakan sesuatu yang membutuhkan presisi tinggi namun tetap memperhatikan detail estetika. Anda nyaman mengikuti standar dan prosedur kerja yang jelas, namun tetap ingin hasil akhirnya terlihat rapi dan menarik secara visual. Anda cocok dengan pekerjaan yang menuntut kesabaran, keterampilan tangan, dan mata yang jeli.',
     occupations: [
       'Juru Gambar CAD',
       'Teknisi Percetakan',
@@ -113,7 +113,7 @@ export const hollandResultsLookup = {
   ERS: {
     title: 'Realistis - Sosial - Wirausaha',
     description_id:
-      'Anda senang bekerja langsung di lapangan sambil memimpin tim dan berinteraksi dengan banyak orang.',
+      'Anda adalah pribadi yang aktif secara fisik, senang berada di lapangan, dan sekaligus punya kemampuan memimpin serta membangun relasi dengan banyak orang. Anda menikmati pekerjaan yang menggabungkan aksi nyata dengan interaksi sosial, dan sering menjadi sosok yang menggerakkan tim untuk mencapai tujuan bersama. Anda cenderung praktis dalam pengambilan keputusan namun tetap peduli pada orang-orang di sekitar Anda.',
     occupations: [
       'Pemilik Bengkel/Usaha Jasa',
       'Manajer Lapangan/Operasional',
@@ -128,7 +128,7 @@ export const hollandResultsLookup = {
   CRS: {
     title: 'Realistis - Sosial - Konvensional',
     description_id:
-      'Anda menyukai pekerjaan yang terstruktur dan praktis, sambil tetap berhubungan langsung dengan orang lain untuk membantu mereka.',
+      'Anda menyukai pekerjaan yang terstruktur dan dapat diprediksi, namun tetap ingin merasa berguna bagi orang lain dalam prosesnya. Anda teliti, dapat diandalkan, dan senang menjalankan tugas dengan cara yang efisien dan sesuai prosedur, sambil tetap memberikan pelayanan yang ramah dan membantu. Anda cocok dalam peran yang membutuhkan kombinasi keterampilan praktis, ketertiban administratif, dan kepedulian terhadap sesama.',
     occupations: [
       'Petugas Administrasi Rumah Sakit',
       'Asisten Apoteker',
@@ -143,7 +143,7 @@ export const hollandResultsLookup = {
   CER: {
     title: 'Realistis - Wirausaha - Konvensional',
     description_id:
-      'Anda menikmati pekerjaan praktis yang terorganisir rapi, sekaligus senang mengelola dan menjalankan usaha.',
+      'Anda memiliki kombinasi antara keterampilan praktis, jiwa bisnis, dan kecenderungan untuk bekerja secara terorganisir. Anda senang mengelola sesuatu yang nyata — baik itu operasional, produk, atau usaha — dengan sistem dan perencanaan yang rapi. Anda cenderung pragmatis, berorientasi hasil, dan nyaman mengambil tanggung jawab dalam mengelola sumber daya secara efisien.',
     occupations: [
       'Pemilik Toko/Ritel',
       'Manajer Gudang',
@@ -158,7 +158,7 @@ export const hollandResultsLookup = {
   AIS: {
     title: 'Investigatif - Artistik - Sosial',
     description_id:
-      'Anda suka meneliti dan memahami sesuatu secara mendalam, mengekspresikannya secara kreatif, dan berbagi dengan orang lain.',
+      'Anda memiliki rasa ingin tahu intelektual yang kuat, kepekaan kreatif, dan kepedulian mendalam terhadap orang lain. Anda senang menggali pemahaman tentang manusia dan dunia di sekitar Anda, lalu mengekspresikan atau membagikan pemahaman itu dengan cara yang bermakna bagi orang lain. Anda cenderung reflektif, empatik, dan tertarik pada makna di balik sesuatu, bukan sekadar fakta permukaan.',
     occupations: [
       'Psikolog',
       'Peneliti Pendidikan',
@@ -173,7 +173,7 @@ export const hollandResultsLookup = {
   AEI: {
     title: 'Investigatif - Artistik - Wirausaha',
     description_id:
-      'Anda senang menganalisis dan menciptakan ide baru, serta memiliki dorongan untuk mewujudkannya menjadi usaha atau produk.',
+      'Anda adalah pemikir kreatif yang senang menganalisis masalah dari berbagai sudut sebelum menciptakan solusi orisinal. Anda tidak puas hanya menghasilkan ide — Anda terdorong untuk mewujudkannya menjadi sesuatu yang nyata dan bernilai, bahkan menjadikannya usaha atau inovasi baru. Anda cenderung visioner, mandiri dalam berpikir, dan senang tantangan intelektual yang membuka peluang baru.',
     occupations: [
       'Peneliti & Pengembang Produk (R&D)',
       'Konsultan Inovasi',
@@ -188,7 +188,7 @@ export const hollandResultsLookup = {
   ACI: {
     title: 'Investigatif - Artistik - Konvensional',
     description_id:
-      'Anda menyukai riset yang mendalam dan sistematis, namun tetap ingin menuangkannya dengan cara yang rapi dan terstruktur.',
+      'Anda menyukai riset dan analisis mendalam, namun juga memiliki sisi kreatif yang ingin menuangkan hasil pemikiran itu dengan cara yang rapi dan terstruktur. Anda teliti dalam bekerja dengan informasi dan detail, sekaligus menghargai bentuk penyajian yang jelas dan estetis. Kombinasi ini membuat Anda cocok dengan pekerjaan yang membutuhkan ketelitian intelektual sekaligus kerapian dalam menyampaikan hasilnya.',
     occupations: [
       'Analis Data Riset',
       'Perancang Basis Data',
@@ -203,7 +203,7 @@ export const hollandResultsLookup = {
   EIS: {
     title: 'Investigatif - Sosial - Wirausaha',
     description_id:
-      'Anda suka meneliti dan memecahkan masalah, sekaligus senang membantu orang dan memimpin inisiatif baru.',
+      'Anda memadukan rasa ingin tahu intelektual dengan kepedulian terhadap orang lain dan dorongan untuk memimpin perubahan. Anda senang memahami akar suatu masalah secara mendalam, terutama yang berdampak pada kehidupan orang banyak, lalu mengambil inisiatif untuk menyelesaikannya. Anda cenderung persuasif, berorientasi solusi, dan nyaman berperan sebagai penggerak dalam isu-isu yang Anda pedulikan.',
     occupations: [
       'Dokter',
       'Konsultan Kesehatan Masyarakat',
@@ -218,7 +218,7 @@ export const hollandResultsLookup = {
   CIS: {
     title: 'Investigatif - Sosial - Konvensional',
     description_id:
-      'Anda menyukai analisis data dan riset yang teliti, sambil tetap ingin membantu dan melayani orang lain.',
+      'Anda adalah pribadi yang teliti dan analitis, namun motivasi Anda datang dari keinginan untuk membantu dan melayani orang lain melalui data dan sistem yang rapi. Anda menikmati pekerjaan yang membutuhkan ketepatan dan konsistensi, sekaligus memberi manfaat nyata bagi orang-orang yang bergantung pada layanan tersebut. Anda cenderung dapat diandalkan, sabar, dan berorientasi pada detail yang akurat.',
     occupations: [
       'Ahli Statistik Kesehatan',
       'Analis Data Sosial',
@@ -233,7 +233,7 @@ export const hollandResultsLookup = {
   CEI: {
     title: 'Investigatif - Wirausaha - Konvensional',
     description_id:
-      'Anda suka menganalisis data secara sistematis dan menggunakannya untuk mengambil keputusan bisnis yang terukur.',
+      'Anda menyukai analisis data yang mendalam dan sistematis, namun juga memiliki naluri bisnis untuk mengubah temuan itu menjadi keputusan strategis. Anda nyaman bekerja dengan angka, tren, dan pola, serta senang ketika hasil analisis Anda benar-benar dipakai untuk mengambil langkah nyata. Anda cenderung rasional, terorganisir, dan berorientasi pada hasil yang terukur.',
     occupations: [
       'Analis Keuangan',
       'Data Analyst/Data Scientist',
@@ -248,7 +248,7 @@ export const hollandResultsLookup = {
   AES: {
     title: 'Artistik - Sosial - Wirausaha',
     description_id:
-      'Anda kreatif dan senang tampil, membantu orang lain, serta memiliki jiwa memimpin dan memasarkan ide.',
+      'Anda adalah pribadi yang ekspresif, senang tampil atau berkarya, sekaligus punya kemampuan alami dalam membangun hubungan dan memengaruhi orang lain. Anda menikmati momen berbagi ide atau karya kreatif Anda ke publik, dan sering menjadi sosok yang menginspirasi atau memimpin dalam lingkungan kreatif. Anda cenderung percaya diri, hangat, dan senang berada di pusat perhatian secara positif.',
     occupations: [
       'Event Organizer',
       'Sutradara Pertunjukan',
@@ -263,7 +263,7 @@ export const hollandResultsLookup = {
   ACS: {
     title: 'Artistik - Sosial - Konvensional',
     description_id:
-      'Anda menikmati kegiatan kreatif dan membantu orang lain, namun tetap suka bekerja dengan cara yang terorganisir.',
+      'Anda memiliki sisi kreatif yang ingin diekspresikan, sekaligus kepedulian untuk membantu dan mendidik orang lain, namun tetap menghargai keteraturan dalam bekerja. Anda menikmati kegiatan seni atau kreatif yang dilakukan dengan cara yang terorganisir dan bermanfaat bagi orang lain, seperti mengajar atau membimbing. Anda cenderung sabar, terstruktur, namun tetap punya sisi imajinatif yang kuat.',
     occupations: [
       'Guru Seni Budaya',
       'Pustakawan Anak',
@@ -278,7 +278,7 @@ export const hollandResultsLookup = {
   ACE: {
     title: 'Artistik - Wirausaha - Konvensional',
     description_id:
-      'Anda kreatif dan berjiwa bisnis, sekaligus mampu mengelola detail dan administrasi usaha kreatif Anda dengan rapi.',
+      'Anda memadukan kreativitas dengan naluri bisnis dan kemampuan mengelola detail secara rapi. Anda senang menciptakan sesuatu yang orisinal, namun juga menikmati proses mengelola dan menjual karya tersebut secara profesional dan terorganisir. Anda cenderung mandiri, teliti dalam hal administratif, dan mampu menyeimbangkan sisi artistik dengan tuntutan praktis dalam berbisnis.',
     occupations: [
       'Pemilik Bisnis Fesyen',
       'Desainer Grafis Lepas (Freelance)',
@@ -293,7 +293,7 @@ export const hollandResultsLookup = {
   CES: {
     title: 'Sosial - Wirausaha - Konvensional',
     description_id:
-      'Anda senang membantu dan bekerja sama dengan orang lain, memiliki jiwa memimpin, serta menyukai pekerjaan yang terorganisir rapi.',
+      'Anda adalah pribadi yang senang membantu dan bekerja sama dengan orang lain, sekaligus memiliki jiwa memimpin dan kemampuan mengelola secara terorganisir. Anda menikmati peran yang melibatkan interaksi manusia dalam konteks yang terstruktur, seperti mengelola tim atau program, dan merasa puas ketika bisa memberikan dampak positif melalui sistem yang rapi. Anda cenderung dapat dipercaya, komunikatif, dan berorientasi pada hasil yang bermanfaat bagi banyak orang.',
     occupations: [
       'Manajer Sumber Daya Manusia (HR)',
       'Manajer Cabang Bank',

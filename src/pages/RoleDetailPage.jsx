@@ -31,21 +31,6 @@ export default function RoleDetailPage() {
               </p>
               <p style={{ color: 'var(--color-text-muted)' }}>{field.description_id}</p>
 
-              <h3 style={{ marginBottom: 8 }}>Rekomendasi Kampus di Indonesia</h3>
-              <ol className="university-list">
-                {field.universities.map((uni) => (
-                  <li key={uni.name}>
-                    <span className="university-name">{uni.name}</span>
-                    <span className="university-faculty">{uni.faculty.join(' / ')}</span>
-                  </li>
-                ))}
-              </ol>
-              <p className="form-hint">
-                Urutan kampus berdasarkan reputasi umum dan akreditasi program studi, bukan peringkat resmi. Nama
-                fakultas bersifat indikatif dan dapat berubah seiring reorganisasi kampus — cek situs resmi
-                universitas untuk memastikan.
-              </p>
-
               {outlook && (
                 <div className="outlook-section">
                   <h3 style={{ marginBottom: 8 }}>Prospek Karier ke Depan</h3>
@@ -62,6 +47,23 @@ export default function RoleDetailPage() {
                   </p>
                 </div>
               )}
+
+              <div className="outlook-section">
+                <h3 style={{ marginBottom: 8 }}>Rekomendasi Kampus di Indonesia</h3>
+                <ol className="university-list">
+                  {field.universities.map((uni) => (
+                    <li key={uni.name}>
+                      <span className="university-name">{uni.name}</span>
+                      <span className="university-faculty">{uni.faculty.join(' / ')}</span>
+                    </li>
+                  ))}
+                </ol>
+                <p className="form-hint">
+                  Urutan kampus berdasarkan reputasi umum dan akreditasi program studi, bukan peringkat resmi. Nama
+                  fakultas bersifat indikatif dan dapat berubah seiring reorganisasi kampus — cek situs resmi
+                  universitas untuk memastikan.
+                </p>
+              </div>
             </>
           ) : (
             <p style={{ color: 'var(--color-text-muted)' }}>
