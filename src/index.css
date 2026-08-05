@@ -577,6 +577,12 @@ input {
   min-width: 0;
 }
 
+.results-graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Override the global .card + .card margin - spacing here comes from
    the grid gap, not stacked-card margin, since these are grid siblings
    rather than a simple vertical stack. */
@@ -584,20 +590,22 @@ input {
   margin-top: 0;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 700px) {
   .results-layout {
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      'header graph'
+      'header header'
+      'graph graph'
       'main main';
-    align-items: start;
+    align-items: stretch;
     gap: 24px;
   }
 
   .results-layout-2x2 {
     grid-template-areas:
-      'header graph'
-      'main comparison';
+      'header header'
+      'graph comparison'
+      'main main';
   }
 
   .results-header {
