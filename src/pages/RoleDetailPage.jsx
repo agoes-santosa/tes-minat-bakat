@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { occupationFieldMap } from '../data/occupationFieldMap';
-import { careerFields } from '../data/careerFields';
+import { careerFields, SMA_TRACK_LABELS } from '../data/careerFields';
 import { careerOutlook, OUTLOOK_TIERS } from '../data/careerOutlook';
 
 export default function RoleDetailPage() {
@@ -50,6 +50,14 @@ export default function RoleDetailPage() {
 
               <div className="outlook-section">
                 <h3 style={{ marginBottom: 8 }}>Rekomendasi Kampus di Indonesia</h3>
+
+                {field.smaTrack && (
+                  <p style={{ marginTop: 0, marginBottom: 14 }}>
+                    Jurusan SMA yang relevan:{' '}
+                    <span className="outlook-badge outlook-stabil">{SMA_TRACK_LABELS[field.smaTrack]}</span>
+                  </p>
+                )}
+
                 <ol className="university-list">
                   {field.universities.map((uni) => (
                     <li key={uni.name}>
@@ -61,7 +69,8 @@ export default function RoleDetailPage() {
                 <p className="form-hint">
                   Urutan kampus berdasarkan reputasi umum dan akreditasi program studi, bukan peringkat resmi. Nama
                   fakultas bersifat indikatif dan dapat berubah seiring reorganisasi kampus — cek situs resmi
-                  universitas untuk memastikan.
+                  universitas untuk memastikan. Penjurusan SMA IPA/IPS/Bahasa juga sudah tidak wajib di banyak
+                  sekolah sejak Kurikulum Merdeka, jadi anggap ini sebagai panduan umum, bukan syarat mutlak.
                 </p>
               </div>
             </>

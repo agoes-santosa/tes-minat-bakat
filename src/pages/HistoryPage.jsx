@@ -5,9 +5,12 @@ import { listResults } from '../services/resultsService';
 import { getTestEngine } from '../testEngines';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-function formatDate(timestamp) {
+function formatDateTime(timestamp) {
   if (!timestamp?.toDate) return '';
-  return timestamp.toDate().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+  const date = timestamp.toDate();
+  const datePart = date.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+  const timePart = date.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+  return `${datePart}, ${timePart}`;
 }
 
 export default function HistoryPage() {
@@ -36,8 +39,7 @@ export default function HistoryPage() {
                 <span className="history-item-code">{result.hollandCodeOrdered}</span>
                 <div className="history-item-body">
                   <div className="history-item-title">{entry?.title ?? 'Tes SDS Holland'}</div>
-                  {entry && <p className="form-hint" style={{ margin: '2px 0' }}>{entry.description_id}</p>}
-                  <div className="history-item-date">{formatDate(result.createdAt)}</div>
+                  <div className="history-item-date">{formatDateTime(result.createdAt)}</div>
                 </div>
               </Link>
             );
