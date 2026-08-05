@@ -560,6 +560,54 @@ input {
 }
 
 /* Results */
+.results-container {
+  max-width: 1080px;
+}
+
+.results-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.results-header,
+.results-sidebar,
+.results-main {
+  min-width: 0;
+}
+
+/* Override the global .card + .card margin - spacing here comes from
+   the grid gap, not stacked-card margin, since these are grid siblings
+   rather than a simple vertical stack. */
+.results-layout > .card + .card {
+  margin-top: 0;
+}
+
+@media (min-width: 880px) {
+  .results-layout {
+    grid-template-columns: 1fr 380px;
+    grid-template-areas:
+      'header header'
+      'main sidebar';
+    align-items: start;
+    gap: 24px;
+  }
+
+  .results-header {
+    grid-area: header;
+  }
+
+  .results-main {
+    grid-area: main;
+    position: sticky;
+    top: 20px;
+  }
+
+  .results-sidebar {
+    grid-area: sidebar;
+  }
+}
+
 .result-code {
   font-size: 3rem;
   font-weight: 800;
