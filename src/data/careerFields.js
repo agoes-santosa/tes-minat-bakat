@@ -673,4 +673,199 @@ export const careerFields = {
       { name: 'UIN Syarif Hidayatullah Jakarta', faculty: ['Fakultas Ilmu Dakwah dan Ilmu Komunikasi'] },
     ],
   },
+  hukum: {
+    name: 'Ilmu Hukum',
+    description_id:
+      'Mempelajari sistem hukum, peraturan perundang-undangan, dan penyelesaian sengketa.',
+    smaTrack: 'IPS',
+    universities: [
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Hukum'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Hukum'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Hukum'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Hukum'] },
+      { name: 'Universitas Diponegoro (Undip)', faculty: ['Fakultas Hukum'] },
+    ],
+  },
+  ekonomi: {
+    name: 'Ilmu Ekonomi',
+    description_id:
+      'Mempelajari produksi, distribusi, dan konsumsi sumber daya, termasuk kebijakan moneter dan fiskal.',
+    smaTrack: 'IPS',
+    universities: [
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Ekonomi dan Bisnis'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Ekonomika dan Bisnis'] },
+      { name: 'Institut Pertanian Bogor (IPB University)', faculty: ['Fakultas Ekonomi dan Manajemen'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Ekonomi dan Bisnis'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Ekonomi dan Bisnis'] },
+    ],
+  },
+  'hubungan-internasional': {
+    name: 'Hubungan Internasional',
+    description_id:
+      'Mempelajari politik global, diplomasi, dan hubungan antarnegara serta organisasi internasional.',
+    smaTrack: 'IPS',
+    universities: [
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisipol)'] },
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Parahyangan (Unpar)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik'] },
+    ],
+  },
+  'sosiologi-antropologi': {
+    name: 'Sosiologi/Antropologi',
+    description_id:
+      'Mempelajari struktur masyarakat, budaya, dan interaksi sosial manusia secara sistematis.',
+    smaTrack: 'IPS',
+    universities: [
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisipol)'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Sumatera Utara (USU)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+    ],
+  },
+  kebidanan: {
+    name: 'Kebidanan',
+    description_id:
+      'Mempelajari asuhan kehamilan, persalinan, dan kesehatan reproduksi perempuan.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Kedokteran'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Kedokteran'] },
+      { name: 'Universitas Brawijaya', faculty: ['Fakultas Kedokteran'] },
+      { name: 'Poltekkes Kemenkes Jakarta III', faculty: ['Jurusan Kebidanan'] },
+      { name: 'Universitas Aisyiyah Yogyakarta', faculty: ['Fakultas Ilmu Kesehatan'] },
+    ],
+  },
+  'kedokteran-gigi': {
+    name: 'Kedokteran Gigi',
+    description_id:
+      'Mempelajari diagnosis, perawatan, dan pencegahan penyakit gigi serta rongga mulut.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Kedokteran Gigi'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Kedokteran Gigi'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Kedokteran Gigi'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Kedokteran Gigi'] },
+      { name: 'Universitas Trisakti', faculty: ['Fakultas Kedokteran Gigi'] },
+    ],
+  },
+  'geologi-pertambangan': {
+    name: 'Teknik Geologi/Pertambangan/Perminyakan',
+    description_id:
+      'Mempelajari eksplorasi dan pengelolaan sumber daya bumi seperti mineral, batu bara, dan migas.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'Institut Teknologi Bandung (ITB)', faculty: ['Fakultas Teknik Pertambangan dan Perminyakan (FTTM)', 'Fakultas Ilmu dan Teknologi Kebumian (FITB)'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Teknik'] },
+      { name: 'Institut Teknologi Sepuluh Nopember (ITS)', faculty: ['Fakultas Teknik Sipil, Perencanaan, dan Kebumian (FTSPK)'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Teknik Geologi'] },
+      { name: 'Universitas Sriwijaya (Unsri)', faculty: ['Fakultas Teknik'] },
+    ],
+  },
+  'teknik-lingkungan': {
+    name: 'Teknik Lingkungan',
+    description_id:
+      'Mempelajari pengelolaan limbah, kualitas air/udara, dan solusi teknis untuk masalah lingkungan.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'Institut Teknologi Bandung (ITB)', faculty: ['Fakultas Teknik Sipil dan Lingkungan (FTSL)'] },
+      { name: 'Institut Teknologi Sepuluh Nopember (ITS)', faculty: ['Fakultas Teknik Sipil, Perencanaan, dan Kebumian (FTSPK)'] },
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Teknik'] },
+      { name: 'Universitas Diponegoro (Undip)', faculty: ['Fakultas Teknik'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Teknik'] },
+    ],
+  },
+  'peternakan-perikanan': {
+    name: 'Peternakan/Perikanan dan Kelautan',
+    description_id:
+      'Mempelajari budidaya dan pengelolaan hewan ternak atau sumber daya perikanan secara berkelanjutan.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'IPB University', faculty: ['Fakultas Peternakan', 'Fakultas Perikanan dan Ilmu Kelautan'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Peternakan', 'Fakultas Perikanan dan Kelautan'] },
+      { name: 'Universitas Brawijaya', faculty: ['Fakultas Peternakan', 'Fakultas Perikanan dan Ilmu Kelautan'] },
+      { name: 'Universitas Airlangga (Unair)', faculty: ['Fakultas Perikanan dan Kelautan'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Peternakan'] },
+    ],
+  },
+  kriminologi: {
+    name: 'Kriminologi',
+    description_id:
+      'Mempelajari sebab-akibat kejahatan, sistem peradilan pidana, dan pencegahan kriminalitas.',
+    smaTrack: 'IPS',
+    universities: [
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik (Fisip)'] },
+      { name: 'Universitas Islam Indonesia (UII)', faculty: ['Fakultas Psikologi dan Ilmu Sosial Budaya'] },
+      { name: 'Institut Ilmu Sosial dan Ilmu Politik (IISIP) Jakarta', faculty: ['Jurusan Kriminologi'] },
+      { name: 'Universitas Muhammadiyah Jakarta', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik'] },
+      { name: 'Universitas Budi Luhur', faculty: ['Fakultas Ilmu Sosial dan Ilmu Politik'] },
+    ],
+  },
+  paud: {
+    name: 'Pendidikan Anak Usia Dini (PAUD)',
+    description_id:
+      'Mempelajari tumbuh kembang dan metode pengajaran khusus untuk anak usia dini.',
+    smaTrack: 'Bebas',
+    universities: [
+      { name: 'Universitas Pendidikan Indonesia (UPI)', faculty: ['Fakultas Ilmu Pendidikan'] },
+      { name: 'Universitas Negeri Jakarta (UNJ)', faculty: ['Fakultas Ilmu Pendidikan'] },
+      { name: 'Universitas Negeri Yogyakarta (UNY)', faculty: ['Fakultas Ilmu Pendidikan dan Keguruan'] },
+      { name: 'Universitas Negeri Surabaya (Unesa)', faculty: ['Fakultas Ilmu Pendidikan'] },
+      { name: 'Universitas Pelita Harapan (UPH)', faculty: ['Fakultas Ilmu Pendidikan'] },
+    ],
+  },
+  'teknik-perkapalan': {
+    name: 'Teknik Perkapalan/Kelautan',
+    description_id:
+      'Mempelajari perancangan, pembangunan, dan perawatan kapal serta bangunan lepas pantai.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'Institut Teknologi Sepuluh Nopember (ITS)', faculty: ['Fakultas Teknologi Kelautan'] },
+      { name: 'Universitas Hasanuddin (Unhas)', faculty: ['Fakultas Teknik'] },
+      { name: 'Universitas Diponegoro (Undip)', faculty: ['Fakultas Teknik'] },
+      { name: 'Universitas Pattimura', faculty: ['Fakultas Teknik'] },
+      { name: 'Politeknik Perkapalan Negeri Surabaya (PPNS)', faculty: ['Jurusan Teknik Bangunan Kapal'] },
+    ],
+  },
+  'sains-murni': {
+    name: 'Sains (Fisika/Kimia/Biologi/Matematika)',
+    description_id:
+      'Mempelajari prinsip dasar alam semesta dan kehidupan melalui riset di bidang fisika, kimia, biologi, atau matematika.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'Institut Teknologi Bandung (ITB)', faculty: ['Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)'] },
+      { name: 'Universitas Indonesia (UI)', faculty: ['Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)'] },
+      { name: 'IPB University', faculty: ['Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)'] },
+      { name: 'Institut Teknologi Sepuluh Nopember (ITS)', faculty: ['Fakultas Sains dan Analitika Data'] },
+    ],
+  },
+  'teknologi-pangan': {
+    name: 'Ilmu dan Teknologi Pangan',
+    description_id:
+      'Mempelajari pengolahan, pengawetan, dan keamanan pangan dari bahan mentah menjadi produk konsumsi.',
+    smaTrack: 'IPA',
+    universities: [
+      { name: 'IPB University', faculty: ['Fakultas Teknologi Pertanian'] },
+      { name: 'Universitas Gadjah Mada (UGM)', faculty: ['Fakultas Teknologi Pertanian'] },
+      { name: 'Universitas Brawijaya', faculty: ['Fakultas Teknologi Pertanian'] },
+      { name: 'Institut Teknologi Bandung (ITB)', faculty: ['Sekolah Ilmu dan Teknologi Hayati (SITH)'] },
+      { name: 'Universitas Padjadjaran (Unpad)', faculty: ['Fakultas Teknologi Industri Pertanian'] },
+    ],
+  },
+  'bisnis-digital': {
+    name: 'Bisnis Digital/Kewirausahaan',
+    description_id:
+      'Mempelajari pengembangan model bisnis, pemasaran digital, dan pengelolaan usaha berbasis teknologi.',
+    smaTrack: 'Bebas',
+    universities: [
+      { name: 'Universitas Ciputra', faculty: ['Faculty of Business'] },
+      { name: 'Institut Teknologi Bandung (ITB)', faculty: ['Sekolah Bisnis dan Manajemen (SBM)'] },
+      { name: 'Universitas Bina Nusantara (Binus)', faculty: ['BINUS Business School'] },
+      { name: 'Universitas Prasetiya Mulya', faculty: ['Business School'] },
+      { name: 'Universitas Multimedia Nusantara (UMN)', faculty: ['Fakultas Ekonomi dan Bisnis'] },
+    ],
+  },
 };
