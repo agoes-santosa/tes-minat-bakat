@@ -593,6 +593,7 @@ input {
 .hexagon-chart {
   width: 100%;
   max-width: 360px;
+  overflow: visible;
 }
 
 .hexagon-grid {

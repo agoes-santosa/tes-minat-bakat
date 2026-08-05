@@ -6,9 +6,13 @@
 // let the gap between them read as a shape difference rather than a
 // separate set of bars.
 
-const SIZE = 340;
+// SIZE has generous margin beyond MAX_RADIUS + LABEL_OFFSET so the
+// longest labels ("Investigatif", "Konvensional") have room to render
+// without being clipped by the SVG viewport on either side.
+const SIZE = 440;
 const CENTER = SIZE / 2;
-const MAX_RADIUS = 108;
+const MAX_RADIUS = 100;
+const LABEL_OFFSET = 30;
 const GRID_LEVELS = [0.25, 0.5, 0.75, 1];
 
 function angleForIndex(index) {
@@ -77,7 +81,7 @@ export default function HollandHexagonChart({ categories, categoryLabels, series
 
       {categories.map((category, index) => {
         const angle = angleForIndex(index);
-        const { x, y } = pointAt(angle, MAX_RADIUS + 24);
+        const { x, y } = pointAt(angle, MAX_RADIUS + LABEL_OFFSET);
         return (
           <text
             key={category}
